@@ -33,7 +33,7 @@ def extract_movie_details(movie_link):
         plot_text = movie_soup.find('div', attrs={'class': 'summary_text'}).get_text().strip() if movie_soup.find(
             'div', attrs={'class': 'summary_text'}) else None
 
-        with open('movies.csv', mode='a') as file:
+        with open('C:/GPT/python-concurrency/movies.csv', mode='a') as file:
             movie_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             if all([title, date, rating, plot_text]):
                 print(title, date, rating, plot_text)
